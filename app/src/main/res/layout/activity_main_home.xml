@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@color/colorBG"
+                android:gravity="bottom"
+                android:text="Praktikum PPB 2019"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_tugas1"
+                android:layout_marginTop="10dp"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:onClick="tugas1"
+                android:text="Tugas 1"
+                />
+
+            <Button
+                android:id="@+id/button_tugas2"
+                android:layout_marginTop="10dp"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:onClick="tugas2"
+                android:text="Tugas 2" />
+
+            <Button
+                android:id="@+id/button_tugas3"
+                android:layout_marginTop="10dp"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:onClick="tugas3"
+                android:text="Tugas 3" />
+
+            <Button
+                android:id="@+id/button_tugas4"
+                android:layout_marginTop="10dp"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:onClick="tugas4"
+                android:text="Tugas 4" />
+
+            <Button
+                android:id="@+id/button_tugas5"
+                android:layout_marginTop="10dp"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:onClick="tugas5"
+                android:text="Tugas 5" />
+
+            <Button
+                android:id="@+id/button_tugas5"
+                android:layout_marginTop="10dp"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:onClick="about"
+                android:text="About" />
+
+        </LinearLayout>
+
+    </ScrollView>
+    
+
+
+</LinearLayout>
