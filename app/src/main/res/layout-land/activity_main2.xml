@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".Main2Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorBG"
+        android:gravity="bottom"
+        android:text="Kedai Lawuh"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/namapes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80sp"
+        android:layout_marginTop="220sp"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:text="@string/nama_pesanan"/>
+
+    <EditText
+        android:id="@+id/enterIdCust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60sp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/namapes"
+        android:hint="@string/masukkan"/>
+
+    <CheckBox
+        android:id="@+id/cbayamgep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:text="Ayam Geprek"/>
+
+    <CheckBox
+        android:id="@+id/cbmiegep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:text="Mie Geprek"/>
+
+    <CheckBox
+        android:id="@+id/cbtelgep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:text="Telur Geprek"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cbayamgep"
+        android:layout_below="@+id/enterIdCust"
+        android:id="@+id/radioGroup">
+        <RadioButton
+            android:id="@+id/rabutt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/cb1"
+            android:layout_marginStart="40sp"
+            android:layout_marginTop="15sp"
+            android:text="@string/cola"
+            android:onClick="checkButton"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rabutt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cb2"
+            android:layout_marginTop="9sp"
+            android:layout_marginStart="40sp"
+            android:text="@string/fanta"
+            android:onClick="checkButton"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/result_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/jumlahPes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cbtelgep"
+        android:hint="Jumlah Pesanan"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button_order"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_below="@+id/jumlahPes"
+        android:text="Order"
+        android:onClick="order"
+        android:background="@drawable/custom_button" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_order"
+        android:layout_marginTop="20sp"
+        android:id="@+id/textView2"/>
+
+    <EditText
+        android:id="@+id/inputBiaya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input biaya"
+        android:layout_below="@+id/textView2"
+        android:textAlignment="center"/>
+
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="30sp"
+    android:text="BAYAR"
+    android:layout_below="@id/inputBiaya"
+    android:background="@drawable/custom_button"
+    android:onClick="pembayaran"/>
+
+    <TextView
+        android:id="@+id/kembalian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputBiaya"
+        android:layout_marginTop="30sp" />
+
+
+
+
+</RelativeLayout>
