@@ -6,71 +6,74 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:padding="30dp"
-    tools:context=".Main2Activity">
+    tools:context=".ActivityTugas2">
+
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100sp"
         android:background="@color/colorBG"
         android:gravity="bottom"
         android:text="Kedai Lawuh"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:id="@+id/header"/>
 
     <TextView
         android:id="@+id/namapes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80sp"
-        android:layout_marginTop="220sp"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="10sp"
         android:layout_centerHorizontal="true"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:text="@string/nama_pesanan"/>
 
     <EditText
         android:id="@+id/enterIdCust"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60sp"
+        android:layout_marginStart="10sp"
         android:textAlignment="center"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/namapes"
+        android:layout_toRightOf="@+id/namapes"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="10sp"
+        android:textSize="16sp"
         android:hint="@string/masukkan"/>
 
     <CheckBox
         android:id="@+id/cbayamgep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
+
+        android:layout_marginTop="160sp"
         android:text="Ayam Geprek"/>
 
     <CheckBox
         android:id="@+id/cbmiegep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="190sp"
         android:text="Mie Geprek"/>
 
     <CheckBox
         android:id="@+id/cbtelgep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="220sp"
         android:text="Telur Geprek"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/cbayamgep"
-        android:layout_below="@+id/enterIdCust"
+        android:layout_below="@+id/namapes"
+        android:layout_marginTop="8sp"
         android:id="@+id/radioGroup">
         <RadioButton
             android:id="@+id/rabutt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/cb1"
-            android:layout_marginStart="40sp"
-            android:layout_marginTop="15sp"
             android:text="@string/cola"
             android:onClick="checkButton"
             android:checked="true"/>
@@ -80,8 +83,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/cb2"
-            android:layout_marginTop="9sp"
-            android:layout_marginStart="40sp"
             android:text="@string/fanta"
             android:onClick="checkButton"/>
 
@@ -96,17 +97,22 @@
 
     <EditText
         android:id="@+id/jumlahPes"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cbtelgep"
+        android:layout_below="@+id/enterIdCust"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:layout_marginStart="20sp"
         android:hint="Jumlah Pesanan"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        tools:ignore="NotSibling" />
 
     <Button
         android:id="@+id/button_order"
-        android:layout_width="match_parent"
-        android:layout_height="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/jumlahPes"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:layout_marginStart="20sp"
         android:text="Order"
         android:onClick="order"
         android:background="@drawable/custom_button" />
@@ -116,32 +122,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_order"
+        android:layout_toRightOf="@+id/radioGroup"
         android:layout_marginTop="20sp"
         android:id="@+id/textView2"/>
 
     <EditText
         android:id="@+id/inputBiaya"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Input biaya"
-        android:layout_below="@+id/textView2"
-        android:textAlignment="center"/>
+
+        android:textAlignment="center"
+        android:layout_toRightOf="@+id/jumlahPes"
+        android:layout_below="@+id/namapes"
+        android:layout_marginTop="45sp"
+        android:layout_marginStart="20sp"/>
 
 
 <Button
-    android:layout_width="match_parent"
-    android:layout_height="30sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:text="BAYAR"
     android:layout_below="@id/inputBiaya"
+    android:layout_toRightOf="@+id/button_order"
+    android:layout_marginStart="70sp"
     android:background="@drawable/custom_button"
-    android:onClick="pembayaran"/>
+    android:onClick="pembayaran"
+    />
 
     <TextView
         android:id="@+id/kembalian"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/inputBiaya"
-        android:layout_marginTop="30sp" />
+        android:layout_below="@+id/button_order"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20sp"
+        />
 
 
 
