@@ -35,7 +35,6 @@
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button"
                 android:gravity="center"
-                android:onClick="tugas1"
                 android:text="Tugas 1"
                 />
 
@@ -46,7 +45,6 @@
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button"
                 android:gravity="center"
-                android:onClick="tugas2"
                 android:text="Tugas 2" />
 
             <Button
@@ -56,8 +54,7 @@
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button"
                 android:gravity="center"
-                android:onClick="tugas3"
-                android:text="Tugas 3" />
+                android:text="Tugas 3"/>
 
             <Button
                 android:id="@+id/button_tugas4"
@@ -66,7 +63,6 @@
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button"
                 android:gravity="center"
-                android:onClick="tugas4"
                 android:text="Tugas 4" />
 
             <Button
@@ -76,18 +72,7 @@
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button"
                 android:gravity="center"
-                android:onClick="tugas5"
                 android:text="Tugas 5" />
-
-            <Button
-                android:id="@+id/button_tugas5"
-                android:layout_marginTop="10dp"
-                android:layout_width="350dp"
-                android:layout_height="100dp"
-                android:background="@drawable/custom_button"
-                android:gravity="center"
-                android:onClick="about"
-                android:text="About" />
 
         </LinearLayout>
 

@@ -1,38 +1,44 @@
 package com.example.myapplication;
 
-public class Mahasiswa {
+public class Makanan {
 
-    private String nama;
-    private String npm;
-    private String nohp;
+    private String namaMkn;
+    private String hargaMkn;
+    private String jumlahMkn;
+    private Integer total;
+    private Integer index;
 
-    public Mahasiswa(String nama, String npm, String nohp) {
-        this.nama = nama;
-        this.npm = npm;
-        this.nohp = nohp;
+    public Makanan(String namaMkn, String hargaMkn, String jumlahMkn, Integer total, Integer index) {
+        this.namaMkn = namaMkn;
+        this.hargaMkn = hargaMkn;
+        this.jumlahMkn = jumlahMkn;
+        this.total = total;
+        this.index = index;
     }
 
-    public String getNama() {
-        return nama;
+    public String getNamaMakanan() {
+        return namaMkn;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+
+    public String getHargaMakanan() {
+        return hargaMkn;
     }
 
-    public String getNpm() {
-        return npm;
+
+    public void setJumlah(String jumlahMkn) {
+        this.jumlahMkn = jumlahMkn;
     }
 
-    public void setNpm(String npm) {
-        this.npm = npm;
+    public Integer getTotal() {
+        return total;
     }
 
-    public String getNohp() {
-        return nohp;
+    public void setTotal(Integer total) {
+        this.total = total;
     }
 
-    public void setNohp(String nohp) {
-        this.nohp = nohp;
+    public Integer getIndex() {
+        return index;
     }
 }

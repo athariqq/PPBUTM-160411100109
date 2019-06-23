@@ -19,7 +19,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity {
+public class ActivityTugas2 extends AppCompatActivity {
     RadioGroup radioGroup;
     RadioButton radioButton, rabutt1, rabutt2;
     TextView textView, hasilView, textView2, kembalian;
@@ -28,14 +28,14 @@ public class Main2Activity extends AppCompatActivity {
     CheckBox ayamgep, miegep, telgep;
 
     private Button btn_call;
+    private Integer integer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_tugas2);
 
         radioGroup = findViewById(R.id.radioGroup);
-
         textView2 = findViewById(R.id.textView2);
         hasilView = findViewById(R.id.result_int);
         rabutt1 = findViewById(R.id.rabutt1);
@@ -47,68 +47,42 @@ public class Main2Activity extends AppCompatActivity {
         kembalian = findViewById(R.id.kembalian);
         jumlahPes = findViewById(R.id.jumlahPes);
         btn_call = findViewById(R.id.btn_call);
-//        Button button_order_radio = findViewById(R.id.button_order_radio);
-//        button_order_radio.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                int radioId = radioGroup.getCheckedRadioButtonId();
-//
-//                radioButton = findViewById(radioId);
-//                textView.setText("Your Pilihan " + radioButton.getText());
-//
-//
-//            }
-//        });
+
 
         btn_call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 openDial();
-                Toast.makeText(getApplicationContext(),"Helleh ...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Opening ...", Toast.LENGTH_SHORT).show();
             }
         });
 
-//        Button btn_call = findViewById(R.id.btn_call);
-//        btn_call.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                openDial();
-//                Toast.makeText(getApplicationContext(),"Helleh ...",Toast.LENGTH_SHORT).show();
-//            }
-//        });
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_awal,menu);
+        inflater.inflate(R.menu.menu_awal, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected (MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
+            case android.R.id.home:
+                openActivityHome();
+                return true;
             case R.id.menu1:
-                Toast.makeText(getApplicationContext(), "Helleh Menu 1...", Toast.LENGTH_SHORT).show();
+                openActivityAbout();
                 return true;
             case R.id.menu2:
-                Toast.makeText(getApplicationContext(), "Helleh Menu 2...", Toast.LENGTH_SHORT).show();
-                return true;
+                Toast.makeText(getApplicationContext(),"fak lah asu gaiso di buka ..",Toast.LENGTH_SHORT).show();
+
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-
-    public void checkButton(View v) {
-        int radioId = radioGroup.getCheckedRadioButtonId();
-
-        radioButton = findViewById(radioId);
-
-        Toast.makeText(this, " Selected Radio Button " + radioButton.getText(), Toast.LENGTH_SHORT).show();
-
     }
 
     public void order(View view) {
@@ -254,5 +228,16 @@ public class Main2Activity extends AppCompatActivity {
             return;
         }
         startActivity(intentDial);
+    }
+
+    public void openActivityAbout() {
+        Intent intent_about = new Intent(this, ActivityAbout.class);
+        startActivity(intent_about);
+    }
+
+    public void openActivityHome() {
+        Intent homeIntent = new Intent(this, MainActivity.class);
+        homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(homeIntent);
     }
 }

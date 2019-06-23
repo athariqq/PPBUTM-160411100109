@@ -1,9 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityPayment">
+    tools:context=".ActivityPayment"
+    android:padding="10sp">
+    <TextView
+        android:id="@+id/detailtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rincian Pesanan"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/namatxt"
+        android:layout_below="@+id/detailtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/ket"
+        android:layout_below="@+id/namatxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:text="Jumlah Pesanan"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/hargatotal"
+        android:layout_below="@+id/ket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:text="0"
+        android:inputType="numberDecimal"
+        android:textSize="17sp" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/masukanUangtxt"
+        android:layout_below="@+id/hargatotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:text="Masukan uang"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/jumlahUangmu"
+        android:layout_below="@+id/masukanUangtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:text="0"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/btnbayar"
+        android:onClick="bayar"
+        android:layout_below="@+id/jumlahUangmu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:text="Bayar"/>
+    <TextView
+        android:id="@+id/kembaliantxt"
+        android:layout_below="@+id/btnbayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/kembalian"
+        android:layout_below="@+id/kembaliantxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/susukmu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnbayar"
+        android:layout_marginTop="10sp"
+        android:textSize="16sp"
+        />
+</RelativeLayout>

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Praktikum PPB</string>
+    <string name="nama_pesanan">Nama Pemesan</string>
+    <string name="masukkan">Masukkan Nama Pelanggan</string>
+    <string name="cola">Coca-cola</string>
+    <string name="fanta">Fanta</string>
+    <string name="pocari">Pocari Sweat</string>
+    <string name="yours">Your Selection : "</string>
+    <string name="word_1">About</string>
+    <string name="word_2">Logout</string>
 </resources>

@@ -72,7 +72,6 @@
             android:layout_marginStart="20sp"
             android:layout_marginTop="15sp"
             android:text="@string/cola"
-            android:onClick="checkButton"
             android:checked="true"/>
 
         <RadioButton
@@ -82,8 +81,7 @@
             android:layout_toRightOf="@+id/cb2"
             android:layout_marginTop="9sp"
             android:layout_marginStart="20sp"
-            android:text="@string/fanta"
-            android:onClick="checkButton"/>
+            android:text="@string/fanta" />
 
     </RadioGroup>
 
